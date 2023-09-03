@@ -25,9 +25,9 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 urlpatterns = [
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls')),
-    #path("", home_list_view, name="home"),
+    #path('', include(router.urls)),
+    #path('api-auth/', include('rest_framework.urls')),
+    path("", home_list_view, name="home"),
     path("hello/<name>", views.hello_there, name="hello_there"),
     path("about/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
